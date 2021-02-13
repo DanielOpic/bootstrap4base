@@ -1,6 +1,58 @@
-.test {
-  padding: 10px;
-  background: #eee;
+.blue{
+  background-color: rgb(100, 169, 226);
+}
+img{
+  max-width: 100%;
+  transition: all 1s ease;
+}
+img:hover{
+  transform: scale(1.1);
+}
+.onenews{
+  margin-top: 10px;
+}
+.mojkontener{
+  overflow: hidden;
+}
+
+.news{
   border: 1px solid #ccc;
-  color: #444;
+  padding: 10px;
+}
+.newsPhoto{
+  height: 200px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+.newsPhotoIn{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-size: cover;
+  background-position: center center;
+  transition: all 13s ease;
+  filter: grayscale(100%);
+}
+.news:hover .newsPhotoIn{
+  transform: scale(1.5) rotate(5deg);
+  filter: grayscale(0%);
+}
+
+.paralex{
+  padding:100px 0;
+  background-image: url('../src/1.jpg');
+  background-size: 100% auto;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 200px 0;
+}
+.paralexText{
+  font-size: 32px;
+  text-align: center;
+  color:#fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #444,2px 2px 2px #444,3px 3px 3px #444,4px 4px 4px #444;  
 }
