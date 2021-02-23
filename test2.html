@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <!-- jquery 3 -->
+    <script src="plugins/jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- moje js -->
+    <script src="js/test.js"></script>
+</head>
+<body>
+    
+    <div onClick="openModal()">Otwórz</div>
+    <div class="modal">
+        Mój box
+        <div onClick="closeModal()">Zamknij</div>
+    </div>
+   
+    <script>
+        function openModal(){
+            $('.modal').addClass('modal-on')
+        }
+        function closeModal(){
+            $('.modal').removeClass('modal-on')
+        }
+    </script>
+    <style>
+        .modal{
+            position: fixed;
+            top:20px;
+            left:20px;
+            right: 20px;
+            bottom:20px;
+            background: #f0f;
+            z-index: 1;
+            display: none;
+        }
+        .modal-on{
+            display: block;
+            animation: dupa_jeza 2s 1;
+        }
+        @keyframes dupa_jeza {
+              0%{ transform: scale(0) }
+            100%{ transform: scale(1) }
+        }
+    </style>
+
+</body>
+</html>

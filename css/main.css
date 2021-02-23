@@ -1,3 +1,4 @@
+/*
 .blue{
   background-color: rgb(100, 169, 226);
 }
@@ -55,4 +56,30 @@ img:hover{
   color:#fff;
   font-weight: bold;
   text-shadow: 1px 1px 1px #444,2px 2px 2px #444,3px 3px 3px #444,4px 4px 4px #444;  
+}
+*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a{
+  text-decoration: none;
+}
+
+.test{
+  margin: 120vh 0;
+  height: 200px;
+  background-color: #f0f;
+  background-image: url('../src/1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size:100% auto;
 }
