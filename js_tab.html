@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery 3 -->
+    <script src="plugins/jquery/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+    <div class="tabHeader">
+        <div id="tab1" class="tabHeaderLink" onClick="zamien(1)">Praca</div>
+        <div id="tab2" class="tabHeaderLink" onClick="zamien(2)">Prywatne</div>
+    </div> 
+
+    <div class="tabBody">
+        <div id="tabContent1" class="tabBodyContent">To jest zakładka z moją pracą</div>
+        <div id="tabContent2" class="tabBodyContent">To jest zakładka z pornografią</div>
+    </div>
+
+    <script>
+        function zamien(ktory){
+            //obsługa knefli
+                $('.tabHeaderLink').removeClass('dupa')
+                $('#tab'+ktory).addClass('dupa')
+
+            //obsługę tabów
+                $('.tabBodyContent').removeClass('active')
+                $('#tabContent'+ktory).addClass('active')
+        }
+    </script>
+    <style>
+        .tabHeader{
+            display: flex;
+        }
+        .tabHeaderLink{
+            border:1px solid #444;
+            padding: 5px;
+            cursor: pointer;
+            width:200px;
+            text-align: center;
+        }
+        .tabHeaderLink.dupa{
+            background: chocolate;
+        }
+        .tabBodyContent{
+            padding:20px;
+            border:1px solid #444;
+            margin:10px 0;
+            display: none;
+        }
+        .tabBodyContent.active{
+            display: block;
+        }
+    </style>
+</body>
+</html>
